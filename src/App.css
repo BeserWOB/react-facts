@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5em;
+    box-shadow: #888888 1px 1px 10px;
+}
+header > img{
+    width: 16em;
+}
+
+main{
+    font-family: 'Inter';
+    position: relative;
+}
+
+main > h1 {
+    margin-top: 57px;
+    margin-left: 27px;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 47px;
+    letter-spacing: -0.05em;
+    
+}
+main > ul > li{
+    font-size: 1.2rem;
+    line-height: 1.25em;
+    list-style: none;
+}
+main > ul > li::before{
+    content: "•"; 
+    color: #00ABCA;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+main > img{
+    position: absolute;
+    top: -15%;
+    right: 0;
+}
+
+.dark-mode-header{
+    background-color: #21222A;
+    box-shadow: none;
+}
+.dark-mode{
+  background: #282D35;
+  color: #FFFFFF;
+}
+
+/* FLIPSWITCH */
+.flipswitch {
+  position: relative;
+  width: 99px;
+}
+.flipswitch input[type=checkbox] {
+  display: none;
+}
+.flipswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid #999999;
+  border-radius: 8px;
+}
+.flipswitch-inner {
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+  float: left;
+  width: 50%;
+  height: 33px;
+  padding: 0;
+  line-height: 33px;
+  font-size: 18px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.flipswitch-inner:before {
+  content: "Light";
+  padding-left: 20px;
+  background-color: #EBEBEB;
+  color: #888888;
+}
+.flipswitch-inner:after {
+  content: "Dark";
+  padding-right: 20px;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align: right;
+}
+.flipswitch-switch {
+  width: 16px;
+  margin: 8.5px;
+  background: #FFFFFF;
+  border: 1px solid #999999;
+  border-radius: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 65px;
+  transition: all 0.3s ease-in 0s;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+  margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+  right: 0;
+}
